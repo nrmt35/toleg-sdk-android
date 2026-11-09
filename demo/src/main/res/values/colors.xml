@@ -1,0 +1,7 @@
+<resources>
+    <color name="demo_background">#F4F6F8</color>
+    <color name="demo_card">#FFFFFF</color>
+    <color name="demo_text">#252525</color>
+    <color name="demo_muted">#808080</color>
+    <color name="demo_blue">#4AACEF</color>
+</resources>

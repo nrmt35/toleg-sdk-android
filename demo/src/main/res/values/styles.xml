@@ -1,0 +1,15 @@
+<resources>
+    <style name="DemoLabel">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/demo_muted</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="DemoRadio">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/demo_text</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+</resources>

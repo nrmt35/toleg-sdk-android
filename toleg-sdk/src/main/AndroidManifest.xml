@@ -1,0 +1,8 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Lets the SDK read the installed Toleg version on Android 11+. -->
+    <queries>
+        <package android:name="com.belgilabs.tmcellpay" />
+    </queries>
+
+</manifest>

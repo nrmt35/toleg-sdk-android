@@ -1,0 +1,9 @@
+<resources>
+    <style name="DemoTheme" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:colorPrimary">#4AACEF</item>
+        <item name="android:colorAccent">#4AACEF</item>
+        <item name="android:statusBarColor">#F4F6F8</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowBackground">@color/demo_background</item>
+    </style>
+</resources>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Toleg SDK Demo"
+            android:textColor="@color/demo_text"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Native Android (Kotlin) · app-to-app payment"
+            android:textColor="@color/demo_muted"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/card"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView style="@style/DemoLabel" android:text="Amount (TMT)" />
+
+            <EditText
+                android:id="@+id/amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:text="1.00" />
+
+            <TextView style="@style/DemoLabel" android:layout_marginTop="8dp" android:text="Order ID" />
+
+            <EditText
+                android:id="@+id/orderId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/card"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView style="@style/DemoLabel" android:text="Simulated backend status (returned from onReturn)" />
+
+            <RadioGroup
+                android:id="@+id/status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checkedButton="@+id/statusSuccess">
+
+                <RadioButton android:id="@+id/statusSuccess" style="@style/DemoRadio" android:text="Success" />
+                <RadioButton android:id="@+id/statusFailed" style="@style/DemoRadio" android:text="Failed" />
+                <RadioButton android:id="@+id/statusUnknown" style="@style/DemoRadio" android:text="Unknown" />
+                <RadioButton android:id="@+id/statusUnfinished" style="@style/DemoRadio" android:text="Unfinished, then success on next poll" />
+            </RadioGroup>
+
+            <TextView style="@style/DemoLabel" android:layout_marginTop="12dp" android:text="Language" />
+
+            <Spinner
+                android:id="@+id/language"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView style="@style/DemoLabel" android:layout_marginTop="12dp" android:text="Theme" />
+
+            <Spinner
+                android:id="@+id/theme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Switch
+                android:id="@+id/showOrderId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:checked="true"
+                android:text="Show order ID"
+                android:textColor="@color/demo_text" />
+
+            <Switch
+                android:id="@+id/checkVersion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:checked="true"
+                android:text="Require installed Toleg ≥ 2.15.2"
+                android:textColor="@color/demo_text" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/pay"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/pay_button"
+            android:stateListAnimator="@null"
+            android:text="Pay with Töleg"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView style="@style/DemoLabel" android:layout_marginTop="20dp" android:text="Event log" />
+
+        <TextView
+            android:id="@+id/log"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/card"
+            android:fontFamily="monospace"
+            android:padding="12dp"
+            android:textColor="@color/demo_text"
+            android:textSize="12sp" />
+    </LinearLayout>
+</ScrollView>
